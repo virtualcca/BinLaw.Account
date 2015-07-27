@@ -1,0 +1,24 @@
+﻿<bill:ListBillViewModel xmlns:Model="using:BinLaw.Account.FE.Model" xmlns:Command="using:GalaSoft.MvvmLight.Command"
+                           xmlns:bill="using:BinLaw.Account.ViewModel.Bill"
+                        StartDateTime="2014/08/01 00:00:00"
+                        EndDateTime="2014/08/30 00:00:00"
+                           IsInDesignMode="True"
+                        IsInDesignModeStatic="False">
+    <bill:ListBillViewModel.AllBillModels>
+        <Model:BillModel AccountType="1" Balance="5000" Category="10200" DateTime="06/15/2014 20:01:13" IsSync="False" Id="1" IsRegular="False" Money="4" Notes="Aliquam phasellus" Name="阿萨姆奶茶" RecordTime="07/16/2014 10:01:21"/>
+        <Model:BillModel AccountType="2" Balance="6200" Category="20200" DateTime="06/16/2014 16:01:13" IsSync="False" Id="2" IsRegular="False" Money="1200" Notes="Class sed mauris integer dis" Name="工资收入" RecordTime="07/26/2014 10:01:45"/>
+        <Model:BillModel AccountType="1" Balance="5840" Category="10200" DateTime="06/21/2014 12:01:13" IsSync="False" Id="3" IsRegular="False" Money="360" Notes="Nullam quisque consequat convallis" Name="CLR via C#" RecordTime="07/29/2014 10:01:23"/>
+        <Model:BillModel AccountType="1" Balance="5800" Category="10200" DateTime="07/16/2014 14:01:13" IsSync="False" Id="4" IsRegular="False" Money="40" Notes="Hac accumsan arcu" Name="微软云计算" RecordTime="08/01/2014 10:01:13"/>
+        <Model:BillModel AccountType="1" Balance="5600" Category="10700" DateTime="07/26/2014 10:01:13" IsSync="False" Id="5" IsRegular="False" Money="200" Notes="Curae dictumst donec" Name="话费" RecordTime="08/03/2014 10:01:13"/>
+        <Model:BillModel AccountType="2" Balance="5800" Category="20400" DateTime="07/28/2014 10:01:13" IsSync="False" Id="56" IsRegular="False" Money="200" Notes="Facilisis etiam aliquam" Name="捡到钱" RecordTime="08/16/2014 09:01:13"/>
+        <Model:BillModel AccountType="1" Balance="5793" Category="10300" DateTime="07/29/2014 08:01:13" IsSync="False" Id="74" IsRegular="False" Money="7" Notes="Lorem morbi" Name="酸辣粉" RecordTime="08/16/2014 10:01:55"/>
+        <Model:BillModel AccountType="1" Balance="4793" Category="10400" DateTime="08/11/2014 11:01:13" IsSync="False" Id="74" IsRegular="False" Money="1000" Notes="Commodo leo" Name="房租" RecordTime="08/16/2014 10:05:22"/>
+        <Model:BillModel AccountType="1" Balance="5793" Category="10200" DateTime="07/29/2014 08:01:13" IsSync="False" Id="74" IsRegular="False" Money="56" Notes="Lorem morbi" Name="Sharepoint 2010 入门到精通" RecordTime="08/17/2014 10:01:55"/>
+        <Model:BillModel AccountType="1" Balance="4793" Category="10500" DateTime="08/11/2014 11:01:13" IsSync="False" Id="74" IsRegular="False" Money="100" Notes="Commodo leo" Name="公交卡" RecordTime="08/18/2014 10:05:22"/>
+    </bill:ListBillViewModel.AllBillModels>
+
+
+    <bill:ListBillViewModel.OnPageLoadedCommand>
+        <Command:RelayCommand/>
+    </bill:ListBillViewModel.OnPageLoadedCommand>
+</bill:ListBillViewModel>

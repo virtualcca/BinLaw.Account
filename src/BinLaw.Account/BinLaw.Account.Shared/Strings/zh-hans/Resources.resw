@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddBill_Textblock.Text" xml:space="preserve">
+    <value>增加账单</value>
+  </data>
+  <data name="AllocationAssertTitle_Pivot.Title" xml:space="preserve">
+    <value>资产配置</value>
+  </data>
+  <data name="All_Textblock.Text" xml:space="preserve">
+    <value>所有</value>
+  </data>
+  <data name="Amount_Textblock.Text" xml:space="preserve">
+    <value>金额</value>
+  </data>
+  <data name="AppName_Textblock.Text" xml:space="preserve">
+    <value>记账吧</value>
+    <comment>app名称</comment>
+  </data>
+  <data name="BillList_Pivot.Title" xml:space="preserve">
+    <value>资产列表</value>
+  </data>
+  <data name="Cancel_Appbar.Label" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="Category_Textblock.Text" xml:space="preserve">
+    <value>分类</value>
+  </data>
+  <data name="CurrencyQuantity_Run.Text" xml:space="preserve">
+    <value>元</value>
+    <comment>货币量词，如”10元“中的”元“即为货币量词</comment>
+  </data>
+  <data name="CurrentMonthExpanse_Textblock.Text" xml:space="preserve">
+    <value>本月总支出</value>
+  </data>
+  <data name="CurrentMonthIncome_Textblock.Text" xml:space="preserve">
+    <value>本月总收入</value>
+  </data>
+  <data name="DateTime_Textblock.Text" xml:space="preserve">
+    <value>时间</value>
+  </data>
+  <data name="Delete_Appbar.Label" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="Detail_Textblock.Text" xml:space="preserve">
+    <value>详情</value>
+  </data>
+  <data name="Edit_Appbar.Label" xml:space="preserve">
+    <value>编辑</value>
+  </data>
+  <data name="Expanse" xml:space="preserve">
+    <value>支出</value>
+  </data>
+  <data name="Expanse_RadioBtn.Content" xml:space="preserve">
+    <value>支出</value>
+  </data>
+  <data name="Income" xml:space="preserve">
+    <value>收入</value>
+  </data>
+  <data name="Income_RadioBtn.Content" xml:space="preserve">
+    <value>收入</value>
+  </data>
+  <data name="LastestBill_Textblock.Text" xml:space="preserve">
+    <value>最近账单</value>
+  </data>
+  <data name="Month_Textblock.Text" xml:space="preserve">
+    <value>本月</value>
+  </data>
+  <data name="Name_Textblock.Text" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="Overview_Textblock.Text" xml:space="preserve">
+    <value>概览</value>
+  </data>
+  <data name="Remark_Textblock.Text" xml:space="preserve">
+    <value>备注</value>
+  </data>
+  <data name="Save_Appbar.Label" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="TotalAssert_Textblock.Text" xml:space="preserve">
+    <value>总资产</value>
+  </data>
+  <data name="Week_Textblock.Text" xml:space="preserve">
+    <value>本周</value>
+  </data>
+  <data name="ConnectMSAccount_Btn.Content" xml:space="preserve">
+    <value>连接您的Microsoft账户</value>
+  </data>
+  <data name="DisConnectMSAccount_Btn.Content" xml:space="preserve">
+    <value>断开连接</value>
+  </data>
+  <data name="SettingAccount_Pivot.Header" xml:space="preserve">
+    <value>账户</value>
+  </data>
+  <data name="SettingEncrypt_Pivot.Header" xml:space="preserve">
+    <value>加密</value>
+  </data>
+  <data name="Setting_Textblock.Text" xml:space="preserve">
+    <value>设置</value>
+  </data>
+  <data name="Accept_Btn.Content" xml:space="preserve">
+    <value>确认</value>
+  </data>
+  <data name="ConnectMSAccount_Run1.Text" xml:space="preserve">
+    <value>连接您的微软账户</value>
+  </data>
+  <data name="ConnectMSAccount_Run2.Text" xml:space="preserve">
+    <value>这将在此应用和您的Microsoft之间同步数据，以便您能在其他设备同时查看和编辑您的账单数据</value>
+  </data>
+  <data name="PasswordTip_Textblock.Text" xml:space="preserve">
+    <value>密码不能为空且长度必须为4位</value>
+  </data>
+  <data name="Password_Textblock.Text" xml:space="preserve">
+    <value>密码</value>
+  </data>
+  <data name="Password_ToggleSwitch.Header" xml:space="preserve">
+    <value>密码</value>
+  </data>
+  <data name="EditPassword_Btn.Content" xml:space="preserve">
+    <value>修改密码</value>
+  </data>
+  <data name="From_Textblock.Text" xml:space="preserve">
+    <value>从</value>
+  </data>
+  <data name="PrivatePolicy_Btn.Content" xml:space="preserve">
+    <value>隐私协议</value>
+  </data>
+  <data name="To_Textblock.Text" xml:space="preserve">
+    <value>到</value>
+  </data>
+  <data name="ValidPassword" xml:space="preserve">
+    <value>请验证您的密码</value>
+  </data>
+  <data name="AppDescription" xml:space="preserve">
+    <value>专为windows phone系统设计，熟悉的微软 Metro风格，让记账风格也能与您的手机相匹配。总资产的显示与金额变化趋势图，让您的账单一目了然。</value>
+  </data>
+  <data name="AppName" xml:space="preserve">
+    <value>记账吧</value>
+    <comment>app名称</comment>
+  </data>
+  <data name="PasswordEnter_Password.PlaceholderText" xml:space="preserve">
+    <value>请输入密码</value>
+  </data>
+  <data name="SetSuccess" xml:space="preserve">
+    <value>设置成功</value>
+  </data>
+  <data name="About_Appbar.Label" xml:space="preserve">
+    <value>关于</value>
+  </data>
+  <data name="AddBill_Appbar.Label" xml:space="preserve">
+    <value>记账</value>
+  </data>
+  <data name="Category_Accommodate" xml:space="preserve">
+    <value>住宿</value>
+  </data>
+  <data name="Category_Communication" xml:space="preserve">
+    <value>通讯</value>
+  </data>
+  <data name="Category_Eat" xml:space="preserve">
+    <value>用餐</value>
+  </data>
+  <data name="Category_Entertainment" xml:space="preserve">
+    <value>娱乐</value>
+  </data>
+  <data name="Category_Investment" xml:space="preserve">
+    <value>投资</value>
+  </data>
+  <data name="Category_Other" xml:space="preserve">
+    <value>其他</value>
+  </data>
+  <data name="Category_Shopping" xml:space="preserve">
+    <value>购物</value>
+  </data>
+  <data name="Category_Traffic" xml:space="preserve">
+    <value>交通</value>
+  </data>
+  <data name="Category_Unclassified" xml:space="preserve">
+    <value>未分类</value>
+  </data>
+  <data name="Category_Wages" xml:space="preserve">
+    <value>工资</value>
+  </data>
+  <data name="More_Btn.Content" xml:space="preserve">
+    <value>更多</value>
+  </data>
+  <data name="Refresh_Appbar.Label" xml:space="preserve">
+    <value>刷新</value>
+  </data>
+  <data name="Setting_Appbar.Label" xml:space="preserve">
+    <value>设置</value>
+  </data>
+  <data name="Version_Textblock.Text" xml:space="preserve">
+    <value>版本号</value>
+  </data>
+  <data name="About_Textblock.Text" xml:space="preserve">
+    <value>关于</value>
+  </data>
+  <data name="AddBillValid" xml:space="preserve">
+    <value>数据输入不完整，请输入完再保存</value>
+  </data>
+  <data name="Attention" xml:space="preserve">
+    <value>注意</value>
+  </data>
+  <data name="DeleteAttention" xml:space="preserve">
+    <value>即将删除本账单，确认吗？</value>
+  </data>
+  <data name="SaveSuccess" xml:space="preserve">
+    <value>保存成功</value>
+  </data>
+  <data name="Expanse_Pivot.Header" xml:space="preserve">
+    <value>支出</value>
+  </data>
+  <data name="Income_Pivot.Header" xml:space="preserve">
+    <value>收入</value>
+  </data>
+  <data name="Location_Textblock.Text" xml:space="preserve">
+    <value>位置</value>
+  </data>
+  <data name="Money_Textbox.PlaceholderText" xml:space="preserve">
+    <value>金额</value>
+  </data>
+  <data name="Name_Textbox.PlaceholderText" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="Note_Textbox.PlaceholderText" xml:space="preserve">
+    <value>备注</value>
+  </data>
+  <data name="SelectCategory_Textbox.PlaceholderText" xml:space="preserve">
+    <value>选择分类</value>
+  </data>
+</root>

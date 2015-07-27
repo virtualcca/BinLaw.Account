@@ -1,0 +1,26 @@
+﻿<Asset:AllocationAssertViewModel xmlns:Asset="using:BinLaw.Account.ViewModel.Asset" xmlns:Model="using:BinLaw.Account.FE.Model" xmlns:Command="using:GalaSoft.MvvmLight.Command" xmlns:System="using:System" EndDateTime="08/30/2014 20:55:42" IsInDesignMode="True" IsInDesignModeStatic="False" StartDateTime="08/30/2014 20:55:42">
+	<Asset:AllocationAssertViewModel.BillModels>
+        <Model:BillModel AccountType="1" Balance="5000" Category="10200" DateTime="06/15/2014 20:01:13" IsSync="False" Id="1" IsRegular="False" Money="4" Notes="Aliquam phasellus" Name="阿萨姆奶茶" RecordTime="07/16/2014 10:01:21"/>
+        <Model:BillModel AccountType="1" Balance="5840" Category="10200" DateTime="06/21/2014 12:01:13" IsSync="False" Id="3" IsRegular="False" Money="360" Notes="Nullam quisque consequat convallis" Name="CLR via C#" RecordTime="07/29/2014 10:01:23"/>
+        <Model:BillModel AccountType="1" Balance="5800" Category="10200" DateTime="07/16/2014 14:01:13" IsSync="False" Id="4" IsRegular="False" Money="40" Notes="Hac accumsan arcu" Name="微软云计算" RecordTime="08/01/2014 10:01:13"/>
+        <Model:BillModel AccountType="1" Balance="5600" Category="10700" DateTime="07/26/2014 10:01:13" IsSync="False" Id="5" IsRegular="False" Money="200" Notes="Curae dictumst donec" Name="话费" RecordTime="08/03/2014 10:01:13"/>
+        <Model:BillModel AccountType="1" Balance="5793" Category="10300" DateTime="07/29/2014 08:01:13" IsSync="False" Id="74" IsRegular="False" Money="7" Notes="Lorem morbi" Name="酸辣粉" RecordTime="08/16/2014 10:01:55"/>
+        <Model:BillModel AccountType="1" Balance="4793" Category="10400" DateTime="08/11/2014 11:01:13" IsSync="False" Id="74" IsRegular="False" Money="1000" Notes="Commodo leo" Name="房租" RecordTime="08/16/2014 10:05:22"/>
+    </Asset:AllocationAssertViewModel.BillModels>
+	<Asset:AllocationAssertViewModel.OnPageLoadedCommand>
+		<Command:RelayCommand/>
+	</Asset:AllocationAssertViewModel.OnPageLoadedCommand>
+	<Asset:AllocationAssertViewModel.PieData>
+		<System:Double>389.87</System:Double>
+        <System:Double>819.13</System:Double>
+        <System:Double>135.08</System:Double>
+		<System:Double>653.95</System:Double>
+		<System:Double>818.33</System:Double>
+        <System:Double>38.9</System:Double>
+        <System:Double>747.84</System:Double>
+    </Asset:AllocationAssertViewModel.PieData>
+    
+	<Asset:AllocationAssertViewModel.QueryBillCommand>
+		<Command:RelayCommand/>
+	</Asset:AllocationAssertViewModel.QueryBillCommand>
+</Asset:AllocationAssertViewModel>

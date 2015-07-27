@@ -1,0 +1,98 @@
+﻿[
+    {
+        "BillType": 1,
+        "Id": 1,
+        "Name": "Category_Unclassified",
+        "CanEdit": false,
+        "BackGround": "#FF647687",
+        "Icon": "Undefined.png"
+    },
+    {
+        "BillType": 1,
+        "Id": 2,
+        "Name": "Category_Shopping",
+        "CanEdit": false,
+        "BackGround": "#FFD80073",
+        "Icon": "Shopping.png"
+    },
+    {
+        "BillType": 1,
+        "Id": 3,
+        "Name": "Category_Eat",
+        "CanEdit": false,
+        "BackGround": "#FFE3C800",
+        "Icon": "Eating.png"
+    },
+    {
+        "BillType": 1,
+        "Id": 4,
+        "Name": "Category_Accommodate",
+        "CanEdit": false,
+        "BackGround": "#FFFA6800",
+        "Icon": "Home.png"
+    },
+    {
+        "BillType": 1,
+        "Id": 5,
+        "Name": "Category_Traffic",
+        "CanEdit": false,
+        "BackGround": "#FFE51400",
+        "Icon": "Car.png"
+    },
+    {
+        "BillType": 1,
+        "Id": 6,
+        "Name": "Category_Entertainment",
+        "CanEdit": false,
+        "BackGround": "#FF1BA1E2",
+        "Icon": "Basketball.png"
+    },
+    {
+        "BillType": 1,
+        "Id": 7,
+        "Name": "Category_Communication",
+        "CanEdit": false,
+        "BackGround": "#FF87794E",
+        "Icon": "Telephone.png"
+    },
+    {
+        "BillType": 1,
+        "Id": 99,
+        "Name": "Category_Other",
+        "CanEdit": false,
+        "BackGround": "#FF76608A",
+        "Icon": "Other.png"
+    },
+    {
+        "BillType": 2,
+        "Id": 1,
+        "Name": "Category_Unclassified",
+        "CanEdit": false,
+        "BackGround": "#FF647687",
+        "Icon": "Undefined.png"
+    },
+    {
+        "BillType": 2,
+        "Id": 2,
+        "Name": "Category_Wages",
+        "CanEdit": false,
+        "BackGround": "#FF008A00",
+        "Icon": "Payment.png"
+    },
+    {
+        "BillType": 2,
+        "Id": 3,
+        "Name": "Category_Investment",
+        "CanEdit": false,
+        "BackGround": "#FFA4C400",
+        "Icon": "Finance.png"
+    },
+    {
+        "BillType": 2,
+        "Id": 99,
+        "Name": "Category_Other",
+        "CanEdit": false,
+        "BackGround": "#FF76608A",
+        "Icon": "Other.png"
+    }
+]

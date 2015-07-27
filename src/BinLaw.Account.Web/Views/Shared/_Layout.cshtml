@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Bill Web App</title>
+
+
+    <link rel="stylesheet" href="/Content/metro-ui/css/metro-bootstrap.min.css" />
+    <link rel="stylesheet" href="/Content/metro-ui/css/metro-bootstrap-responsive.min.css" />
+    <link rel="stylesheet" href="/Content/metro-ui/css/iconFont.min.css" />
+    <script src="/Scripts/jquery-2.1.1.min.js"></script>
+    <script src="/Scripts/metro-ui/jquery.ui.widget.js"></script>
+    <script src="/Scripts/metro-ui/metro.min.js"></script>
+    
+</head>
+<body class="metro">
+
+
+    <nav class="navigation-bar">
+        <nav class="navigation-bar-content">
+
+            <a class="element" href="#">
+                <img title="Bill" style="width: 22px; height: 22px;" src="/Image/logo.svg">
+                <span > Bill Web App</span>
+            </a>
+
+            <span class="element-divider"></span>
+            <div class="element">
+                <a class="dropdown-toggle" href="#"> Base </a>
+                <ul class="dropdown-menu" data-role="dropdown">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                </ul>
+            </div>
+
+            <span class="element-divider"></span>
+            <a class="element brand" href="#"><span class="icon-spin"></span></a>
+            <span class="element-divider"></span>
+        </nav>
+    </nav>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Bill Web App</p>
+        </footer>
+    </div>
+</body>
+</html>

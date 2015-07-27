@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="SharedProjectFile_SccProperties">
+    <SharedProjectFile_ProjectGuid>{d772768b-4bff-4c7f-babc-ae5d347ff0f3}</SharedProjectFile_ProjectGuid>
+    <SharedProjectFile_SccProjectName>SAK</SharedProjectFile_SccProjectName>
+    <SharedProjectFile_SccAuxPath>SAK</SharedProjectFile_SccAuxPath>
+    <SharedProjectFile_SccLocalPath>SAK</SharedProjectFile_SccLocalPath>
+    <SharedProjectFile_SccProvider>SAK</SharedProjectFile_SccProvider>
+  </PropertyGroup>
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>bcc995d7-5078-4865-932a-2cd71d516110</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>BinLaw.Account</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="$(MSBuildThisFileDirectory)App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\NumericPasswordBox.xaml.cs">
+      <DependentUpon>NumericPasswordBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\NumericTextBox.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converter\BillConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converter\BooleanToVisibilityConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converter\DateTimeFormaterConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converter\DateTimeOffsetFormaterConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converter\DateTimeToOffsetConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converter\EqualToVisibilityConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converter\IntervalDatatimeConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converter\MoneyColorConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converter\MoneyConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converter\NullToVisibilityConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converter\VisibilityReverse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helper\BillHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helper\DoingHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\BillModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Service\NavigationService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Service\DataService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\AppViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\Asset\AllocationAssertViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\Bill\AddBillViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\Bill\DetailBillViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\Bill\ListBillViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\InitialFirstViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\MainViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\Setting\SettingViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\ViewModelLocator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Account\Basketball.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Account\Car.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Account\Eating.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Account\Finance.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Account\Home.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Account\Other.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Account\Payment.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Account\Shopping.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Account\Telephone.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Account\Undefined.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Logo\AboutLogo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Logo\MSFT_logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="$(MSBuildThisFileDirectory)Controls\NumericPasswordBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Style\ColorStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <PRIResource Include="$(MSBuildThisFileDirectory)Strings\en-US\Resources.resw">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </PRIResource>
+    <PRIResource Include="$(MSBuildThisFileDirectory)Strings\zh-hans\Resources.resw" />
+  </ItemGroup>
+</Project>

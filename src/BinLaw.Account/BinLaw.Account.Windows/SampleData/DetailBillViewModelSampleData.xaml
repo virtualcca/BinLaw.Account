@@ -1,0 +1,42 @@
+﻿<Bill:DetailBillViewModel xmlns:Bill="using:BinLaw.Account.ViewModel.Bill" xmlns:Model="using:BinLaw.Account.FE.Model" xmlns:Bill1="using:BinLaw.Account.FE.Model.Bill" xmlns:Command="using:GalaSoft.MvvmLight.Command" 
+                          Category="Faucibus adipiscing" 
+                          DateTime="08/16/2014 10:02:42" 
+                          IsEdit="False" 
+                          IsInDesignMode="False" 
+                          IsInDesignModeStatic="True" 
+                          Money="52464.39" Notes="Aenean duis" 
+                          Name="Cras curabitur nam"
+                          AccountType="1">
+	<Bill:DetailBillViewModel.AccountModel>
+		<Model:BillModel AccountType="1" Balance="160.43" Category="10200" DateTime="08/16/2014 10:02:42" IsSync="False" Id="30" IsRegular="True" Money="107.5" Notes="Cursus dictum sem lectus" Name="Dolor" RecordTime="08/16/2014 10:02:42"/>
+	</Bill:DetailBillViewModel.AccountModel>
+	<Bill:DetailBillViewModel.CateGoryItems>
+        <Bill1:BillCategoryItem AccountType="1" CanEdit="False" Icon="Undefined.png" Id="1" Name="未分类"/>
+        <Bill1:BillCategoryItem AccountType="1" CanEdit="False" Icon="Shopping.png" Id="2" Name="购物"/>
+        <Bill1:BillCategoryItem AccountType="1" CanEdit="False" Icon="Eating.png" Id="3" Name="用餐"/>
+        <Bill1:BillCategoryItem AccountType="1" CanEdit="False" Icon="Home.png" Id="4" Name="住宿"/>
+        <Bill1:BillCategoryItem AccountType="1" CanEdit="False" Icon="Car.png" Id="5" Name="交通"/>
+        <Bill1:BillCategoryItem AccountType="1" CanEdit="False" Icon="Basketball.png" Id="6" Name="娱乐"/>
+        <Bill1:BillCategoryItem AccountType="1" CanEdit="False" Icon="Telephone.png" Id="6" Name="通讯"/>
+        <Bill1:BillCategoryItem AccountType="1" CanEdit="False" Icon="Other.png" Id="7" Name="其他"/>
+        <Bill1:BillCategoryItem AccountType="2" CanEdit="False" Icon="Undefined.png" Id="1" Name="未分类"/>
+        <Bill1:BillCategoryItem AccountType="2" CanEdit="False" Icon="Payment.png" Id="2" Name="工资"/>
+        <Bill1:BillCategoryItem AccountType="2" CanEdit="False" Icon="Finance.png" Id="3" Name="金融收益"/>
+        <Bill1:BillCategoryItem AccountType="2" CanEdit="False" Icon="Other.png" Id="4" Name="其他"/>
+    </Bill:DetailBillViewModel.CateGoryItems>
+	<Bill:DetailBillViewModel.CancelEditCommand>
+		<Command:RelayCommand/>
+	</Bill:DetailBillViewModel.CancelEditCommand>
+	<Bill:DetailBillViewModel.DeleteAccountCommand>
+		<Command:RelayCommand/>
+	</Bill:DetailBillViewModel.DeleteAccountCommand>
+	<Bill:DetailBillViewModel.EditAccountCommand>
+		<Command:RelayCommand/>
+	</Bill:DetailBillViewModel.EditAccountCommand>
+	<Bill:DetailBillViewModel.OnPageLoadedCommand>
+		<Command:RelayCommand/>
+	</Bill:DetailBillViewModel.OnPageLoadedCommand>
+	<Bill:DetailBillViewModel.SaveAccountCommand>
+		<Command:RelayCommand/>
+	</Bill:DetailBillViewModel.SaveAccountCommand>
+</Bill:DetailBillViewModel>

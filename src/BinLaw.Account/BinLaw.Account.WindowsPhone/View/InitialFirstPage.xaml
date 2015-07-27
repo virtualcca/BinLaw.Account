@@ -1,0 +1,71 @@
+﻿<Page
+    x:Class="BinLaw.Account.View.InitialFirstPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BinLaw.Account.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+    xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+    DataContext="{Binding Source={StaticResource Locator},Path=InitialFirstViewModel}"
+    >
+    <Page.Background>
+        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/background.jpg"/>
+    </Page.Background>
+
+    <interactivity:Interaction.Behaviors>
+        <core:EventTriggerBehavior EventName="Loaded">
+            <core:InvokeCommandAction Command="{Binding OnPageLoadedCommand}"></core:InvokeCommandAction>
+        </core:EventTriggerBehavior>
+    </interactivity:Interaction.Behaviors>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition></RowDefinition>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal"
+                    VerticalAlignment="Bottom"
+                    HorizontalAlignment="Center">
+            <Image 
+            Width="128"
+            Source="ms-appx:///Assets/Cheque.png"></Image>
+            <TextBlock
+                x:Uid="AppName_Textblock"
+                Margin="20,0,0,0"
+                Style="{StaticResource TitleTextBlockStyle}"
+                FontSize="32"
+                HorizontalAlignment="Center"
+                Foreground="White"
+                VerticalAlignment="Center"></TextBlock>
+        </StackPanel>
+        
+        <StackPanel
+            Grid.Row="2"
+            Orientation="Vertical"
+            VerticalAlignment="Center">
+            <TextBlock
+            Text="开始您的记账生活"
+            Style="{StaticResource TitleTextBlockStyle}"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Foreground="White"
+            FontSize="20"
+            FontWeight='Bold'></TextBlock>
+
+            <Button 
+            VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Content="点击开始"
+                BorderThickness="0"
+                Foreground="#666666"
+                Background="White"
+                Command="{Binding NavigateToMainPage}"></Button>
+
+        </StackPanel>
+        
+    </Grid>
+</Page>

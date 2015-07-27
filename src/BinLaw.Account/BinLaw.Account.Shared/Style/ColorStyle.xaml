@@ -1,0 +1,21 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    >
+
+    <!--    Color-->
+    <Color x:Key="TitleBackgroundColor">#27A6DD</Color>
+    <Color x:Key="ExpanseAccountColor">#C40110</Color>
+    <Color x:Key="IncomeAccountColor">#4A8D38</Color>
+    <Color x:Key="TotalAccountColor">#68D5E6</Color>
+
+    <!--    Brush-->
+    <SolidColorBrush Color="{StaticResource TitleBackgroundColor}" x:Key="TitleBackgroundColorBrush"></SolidColorBrush>
+    <SolidColorBrush Color="#13B0C3" x:Key="ShowTotalMoneyColorBrush"></SolidColorBrush>
+    <SolidColorBrush Color="#E35F21" x:Key="ShowExpandMoneyColorBrush"></SolidColorBrush>
+    <SolidColorBrush Color="#8BB012" x:Key="ShowIncomeMoneyColorBrush"></SolidColorBrush>
+
+    <SolidColorBrush Color="{StaticResource ExpanseAccountColor}" x:Key="ExpanseAccountColorBrush"></SolidColorBrush>
+    <SolidColorBrush Color="{StaticResource IncomeAccountColor}" x:Key="IncomeAccountColorBrush"></SolidColorBrush>
+
+</ResourceDictionary>

@@ -1,0 +1,17 @@
+﻿<VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.1">
+    <!-- The CommandSet Name is used to programmatically access the CommandSet -->
+    <CommandSet xml:lang="zh-CN" Name="chineseCommands">
+        <!-- The CommandPrefix provides an alternative to your full app name for invocation -->
+        <CommandPrefix> 记账本 </CommandPrefix>
+        <!-- The CommandSet Example appears in the global help alongside your app name -->
+        <Example> 搜索 构造 函数 </Example>
+      
+        <Command Name="AddAccountCommand">
+            <Example> 记账 </Example>
+            <ListenFor> 记账 </ListenFor>
+            <Feedback> 启动 记账本... </Feedback>
+            <Navigate Target="AddAccountPage.xaml" />
+        </Command>
+
+    </CommandSet>
+</VoiceCommands>

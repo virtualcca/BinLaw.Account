@@ -1,0 +1,29 @@
+﻿<Application
+    x:Class="BinLaw.Account.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BinLaw.Account"
+    xmlns:converter="using:BinLaw.Account.Converter"
+    xmlns:viewModel="using:BinLaw.Account.ViewModel"
+    RequestedTheme="Light">
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <viewModel:ViewModelLocator x:Key="Locator" ></viewModel:ViewModelLocator>
+            <converter:MoneyConverter x:Key="MoneyConverter"></converter:MoneyConverter>
+            <ResourceDictionary.MergedDictionaries>
+                <!-- ReSharper disable Xaml.PathError -->
+                <ResourceDictionary Source="/Style/ColorStyle.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="/Style/TextBlockStyle.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="/Style/ListboxStyle.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="/Style/StandardStyle.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="/Style/TextBoxStyle.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="/Style/BaseStyle.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="/Style/TelerikStyle.xaml"/>
+                <!-- ReSharper restore Xaml.PathError -->
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+    
+
+</Application>

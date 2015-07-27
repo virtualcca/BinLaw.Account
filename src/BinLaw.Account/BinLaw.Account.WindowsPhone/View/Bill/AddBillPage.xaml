@@ -1,0 +1,347 @@
+﻿<Page
+    x:Class="BinLaw.Account.View.Bill.AddBillPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BinLaw.Account.View.Bill"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+    xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+    NavigationCacheMode="Disabled"
+    xmlns:converter="using:BinLaw.Account.Converter"
+    xmlns:controls="using:BinLaw.Account.Controls"
+    xmlns:extension="using:BinLaw.Account.FE.Foundation.Extension"
+    DataContext="{Binding Source={StaticResource Locator},Path=AddBillViewModel}"
+    d:DataContext="{d:DesignData /SampleData/AddBillViewModelSampleData.xaml}"
+
+    >
+
+    <Page.Resources>
+        <converter:MoneyColorConverter x:Key="MoneyColorConverter"/>
+        <converter:BooleanToVisibilityConverter x:Key="BoolToVisibilityConverter"></converter:BooleanToVisibilityConverter>
+        <converter:DateTimeToOffsetConverter x:Key="DateTimeToOffsetConverter"></converter:DateTimeToOffsetConverter>
+        <converter:DateTimeOffsetFormaterConverter x:Key="DateTimeOffsetFormaterConverter"></converter:DateTimeOffsetFormaterConverter>
+        <converter:BillCategoryIconPathConverter x:Key="BillCategoryIconPathConverter"></converter:BillCategoryIconPathConverter>
+        <converter:BillCategoryIconBackgroudColorConverter x:Key="BillCategoryIconBackgroudColorConverter"></converter:BillCategoryIconBackgroudColorConverter>
+        <converter:NullToVisibilityConverter x:Key="NullToVisibilityConverter"></converter:NullToVisibilityConverter>
+
+        <!--CategoryListViewDateTemplate-->
+        <DataTemplate x:Key="CategoryListView">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="60"/>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="4"/>
+                </Grid.RowDefinitions>
+
+                <Border 
+                                Grid.Column="0"
+                                Background="{Binding CategoryId,Converter={StaticResource BillCategoryIconBackgroudColorConverter}}" 
+                                Width="48" 
+                                Height="48" >
+                    <Image
+                                Width="48"
+                                Height="48"
+                                Source="{Binding CategoryId,Converter={StaticResource BillCategoryIconPathConverter}}"></Image>
+                </Border>
+
+                <TextBlock
+                                Grid.Column="1"
+                                Text="{Binding Name}"/>
+            </Grid>
+        </DataTemplate>
+
+        <ControlTemplate TargetType="DatePicker" x:Key="DateTimePickerTemplate">
+            <StackPanel x:Name="LayoutRoot" Margin="{TemplateBinding Padding}">
+                <ContentPresenter x:Name="HeaderContentPresenter" ContentTemplate="{TemplateBinding HeaderTemplate}" 
+                                  Content="{TemplateBinding Header}" Margin="0,0,0,-3" 
+                                  Style="{StaticResource HeaderContentPresenterStyle}"/>
+                <Button x:Name="FlyoutButton" 
+                            BorderThickness="0" 
+                            Background="{TemplateBinding Background}" 
+                            Foreground="{TemplateBinding Foreground}" 
+                            HorizontalAlignment="Stretch" 
+                            HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            IsEnabled="{TemplateBinding IsEnabled}" 
+                            Padding="6.5,0,0,3">
+                     <Button.Content>
+                        <StackPanel
+                        Orientation="Vertical">
+                            <TextBlock 
+                    HorizontalAlignment="Center"
+                    Text="{Binding Date.Day, Mode=OneWay, RelativeSource={RelativeSource Mode=TemplatedParent}}"/>
+                            <TextBlock 
+                    HorizontalAlignment="Center"
+                    FontWeight="SemiLight"
+                    Text="{Binding Date, RelativeSource={RelativeSource Mode=TemplatedParent},Converter={StaticResource DateTimeOffsetFormaterConverter},ConverterParameter='MMM yyyy'}"/>
+
+
+                        </StackPanel>
+                    </Button.Content>
+                </Button>
+            </StackPanel>
+
+        </ControlTemplate>
+
+    </Page.Resources>
+
+    <interactivity:Interaction.Behaviors>
+        <core:EventTriggerBehavior EventName="Loaded">
+            <core:InvokeCommandAction Command="{Binding OnPageLoadCommand}"></core:InvokeCommandAction>
+        </core:EventTriggerBehavior>
+    </interactivity:Interaction.Behaviors>
+    <Grid
+        x:Name="RootLayout">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="38"></RowDefinition>
+            <RowDefinition Height="20"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        <Border
+            Width="140"
+            HorizontalAlignment="Left"
+            Margin="20,0"
+            Background="{StaticResource TitleBackgroundColorBrush}">
+            <TextBlock 
+                x:Uid="AppName_Textblock"
+            Style="{StaticResource MainTitleTextBlockStyle}"
+                Foreground="{StaticResource ApplicationPageBackgroundThemeBrush}"
+                />
+        </Border>
+
+        <Popup
+            x:Name="CategoryPopup"
+            Grid.RowSpan="4"
+            VerticalAlignment="Stretch"
+            Height="{Binding ActualHeight, ElementName=RootLayout, Mode=OneWay}"
+            IsOpen="{Binding IsSelectingCategory}">
+            <Pivot
+                Background="{StaticResource PhoneBackgroundBrush}" >
+
+                <PivotItem x:Uid="Expanse_Pivot">
+                    <ListView
+                        ItemsSource="{Binding ExpanseCateGoryItems}"
+                        ItemTemplate="{StaticResource CategoryListView}"
+                        extension:ItemClickCommand.Command="{Binding SelectedCategoryCommand}" 
+                        IsItemClickEnabled="True"></ListView>
+                </PivotItem>
+
+                <PivotItem x:Uid="Income_Pivot" >
+                    <ListView
+                        ItemsSource="{Binding IncomeCateGoryItems}"
+                        ItemTemplate="{StaticResource CategoryListView}"
+                        extension:ItemClickCommand.Command="{Binding SelectedCategoryCommand}" 
+                        IsItemClickEnabled="True"></ListView>
+                </PivotItem>
+            </Pivot>
+
+        </Popup>
+
+        <Grid
+            Grid.Row="2"
+        >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"></RowDefinition>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="8"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="8"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+         
+
+            <TextBlock Grid.Row="0"
+                   x:Uid="AddBill_Textblock"
+                   Style="{StaticResource MainTitleTextBlockStyle}"
+                   ></TextBlock>
+
+
+            <Grid Grid.Row="1"
+                     >
+                <Grid >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" MinHeight="70"></RowDefinition>
+                        <RowDefinition Height="auto" MinHeight="70"></RowDefinition>
+                        <RowDefinition Height="auto" MinHeight="70"></RowDefinition>
+
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        <ColumnDefinition Width="5*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Border 
+                     Grid.Column="0"
+                     Background="{Binding SelectedCategoryItem.CategoryId,Converter={StaticResource BillCategoryIconBackgroudColorConverter}}" 
+                     Width="48" 
+                     Height="48"
+                     Visibility="{Binding SelectedCategoryItem,Converter={StaticResource NullToVisibilityConverter}}">
+                        <Image
+                         Width="48"
+                         Height="48"
+                         Source="{Binding SelectedCategoryItem.CategoryId,Converter={StaticResource BillCategoryIconPathConverter}}"
+                         ></Image>
+                    </Border>
+                    <Border 
+                     Grid.Column="0"
+                     Background="Gray" 
+                     Width="48" 
+                     Height="48" 
+                     Visibility="{Binding SelectedCategoryItem,Converter={StaticResource NullToVisibilityConverter},ConverterParameter=true}">
+
+                        <Image 
+                         Width="48"
+                         Height="48" 
+                         Source="ms-appx:///Assets/Account/Undefined.png"
+                           />
+                    </Border>
+
+                    <TextBox
+                    x:Uid="SelectCategory_Textbox"
+                    Grid.Row="0" Grid.Column="1"
+                    Style="{StaticResource InputNoneBorderTextBox}"
+                    IsReadOnly="True"
+                    Foreground="{Binding SelectedCategoryItem.BillType,Converter={StaticResource MoneyColorConverter}}"
+                    Text="{Binding SelectedCategoryItem.Name}" InputScope="Number">
+                        <interactivity:Interaction.Behaviors>
+                            <core:EventTriggerBehavior EventName="GotFocus">
+                                <core:InvokeCommandAction Command="{Binding SelectingCategoryCommand}"/>
+                            </core:EventTriggerBehavior>
+                        </interactivity:Interaction.Behaviors>
+                    </TextBox>
+
+                    <controls:NumericTextBox 
+                    x:Uid="Money_Textbox"
+                    Grid.Row="1" Grid.Column="1"
+                    Style="{StaticResource InputNoneBorderTextBox}" 
+                    Text="{Binding Money, Mode=TwoWay}" 
+                    InputScope="Number"
+                    Foreground="{Binding SelectedCategoryItem.BillType,Converter={StaticResource MoneyColorConverter}}">
+                    </controls:NumericTextBox>
+
+                    <ContentPresenter 
+                    Grid.Row="2" Grid.Column="0"
+                    Content="&#xE104;" 
+                    FontFamily="Segoe UI Symbol"
+                    FontSize="{StaticResource OverSmallFontSize}"
+                    Foreground="Gray"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    ></ContentPresenter>
+                    <TextBox 
+                    x:Uid="Name_Textbox"
+                    Grid.Row="2" Grid.Column="1"
+                    Style="{StaticResource InputNoneBorderTextBox}"
+                    Text="{Binding Name, Mode=TwoWay}" />
+
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Row="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="1"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Orientation="Vertical"
+                        Grid.Row="0"
+                        Grid.Column="0">
+                    <TextBlock
+                    Style="{StaticResource ControlContextualInfoTextBlockStyle}"
+                    HorizontalAlignment="Center"
+                    Text="{Binding ElementName=DatePicker,Path=Date.DayOfWeek}"/>
+                    <DatePicker 
+                        x:Name="DatePicker"
+                        Style="{StaticResource ContentDatePickerStyle}"
+                        Date="{Binding DateTime,Mode=TwoWay,Converter={StaticResource DateTimeToOffsetConverter}}" 
+                        Template="{StaticResource DateTimePickerTemplate}"
+                        HorizontalAlignment="Center"
+                        ></DatePicker>
+                </StackPanel>
+
+
+                <Border
+                Grid.Column="1"
+                Grid.RowSpan="2"
+                Background="Gray"
+                VerticalAlignment="Stretch"
+                HorizontalAlignment="Stretch"/>
+
+                <TextBox
+                x:Uid="Note_Textbox"
+                Grid.Row="0"
+                Grid.Column="2"
+                Style="{StaticResource InputNoneBorderTextBox}"
+                VerticalAlignment="Top"
+                Margin="20,14,0,10"
+                Text="{Binding Note}"
+                >
+
+                </TextBox>
+            </Grid>
+
+            <Grid Grid.Row="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="Auto" ></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <TextBlock
+                x:Uid="Location_Textblock"
+                Style="{StaticResource MainTextTextBlockStyle}"
+                HorizontalAlignment="Center" />
+
+                <Button
+                Grid.Row="1"
+                Grid.Column="0"
+                BorderThickness="0"
+                FontFamily="Segoe UI Symbol"
+                Content="&#xE1D2;"
+                Command="{Binding PositioningLocationCommand}"
+                HorizontalAlignment="Center">
+                </Button>
+
+                <TextBlock
+                Grid.Row="1"
+                Grid.Column="1"
+                VerticalAlignment="Center"
+                Style="{StaticResource MainTextTextBlockStyle}">
+                <Run Text="{Binding GeoPosition.Coordinate.Latitude}"/>
+                <Run Text=" "/>
+                <Run Text="{Binding GeoPosition.Coordinate.Longitude}"/>
+                </TextBlock>
+
+
+            </Grid>
+        </Grid>
+    </Grid>
+    
+
+
+    <Page.BottomAppBar>
+        <CommandBar >
+            <!--<AppBarButton Icon="Pin" Label="固定到桌面" Command="{Binding PinAddBillTileCommand}" Visibility="{Binding IsPin,Converter={StaticResource BoolToVisibilityConverter},ConverterParameter=true}"/>-->
+            <AppBarButton 
+                x:Uid="Save_Appbar"
+                Icon="Save" Command="{Binding SaveBillCommand}"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>

@@ -1,0 +1,35 @@
+﻿<Bill:AddBillViewModel xmlns:Bill="using:BinLaw.Account.ViewModel.Bill" xmlns:Bill1="using:BinLaw.Account.FE.Model.Bill" xmlns:Command="using:GalaSoft.MvvmLight.Command" 
+                       BillType="True" 
+                       DateTime="08/16/2014 10:01:31" 
+                       IsInDesignMode="True"
+                       IsInDesignModeStatic="False" 
+                       Money="698.32" 
+                       Note="Adipiscing blandit fringilla erat" 
+                       Name="Aenean">
+	<Bill:AddBillViewModel.CateGoryItems>
+        <Bill1:BillCategoryItem BillType="1" Icon="Undefined.png" Id="1" Name="未分类"/>
+        <Bill1:BillCategoryItem BillType="1" Icon="Shopping.png" Id="2" Name="购物"/>
+        <Bill1:BillCategoryItem BillType="1" Icon="Eating.png" Id="3" Name="用餐"/>
+        <Bill1:BillCategoryItem BillType="1" Icon="Home.png" Id="4" Name="住宿"/>
+        <Bill1:BillCategoryItem BillType="1" Icon="Car.png" Id="5" Name="交通"/>
+        <Bill1:BillCategoryItem BillType="1" Icon="Basketball.png" Id="6" Name="娱乐"/>
+        <Bill1:BillCategoryItem BillType="1" Icon="Telephone.png" Id="6" Name="通讯"/>
+        <Bill1:BillCategoryItem BillType="1" Icon="Other.png" Id="7" Name="其他"/>
+        <Bill1:BillCategoryItem BillType="2" Icon="Undefined.png" Id="1" Name="未分类"/>
+        <Bill1:BillCategoryItem BillType="2" Icon="Payment.png" Id="2" Name="工资"/>
+        <Bill1:BillCategoryItem BillType="2" Icon="Finance.png" Id="3" Name="金融收益"/>
+        <Bill1:BillCategoryItem BillType="2" Icon="Other.png" Id="4" Name="其他"/>
+    </Bill:AddBillViewModel.CateGoryItems>
+	<Bill:AddBillViewModel.CategorySelectedChangedCommand>
+		<Command:RelayCommand/>
+	</Bill:AddBillViewModel.CategorySelectedChangedCommand>
+	<Bill:AddBillViewModel.OnPageLoadCommand>
+		<Command:RelayCommand/>
+	</Bill:AddBillViewModel.OnPageLoadCommand>
+	<Bill:AddBillViewModel.SaveBillCommand>
+		<Command:RelayCommand/>
+	</Bill:AddBillViewModel.SaveBillCommand>
+	<Bill:AddBillViewModel.SelectedCategoryItem>
+        <Bill1:BillCategoryItem AccountType="1" CanEdit="False" Icon="Basketball.png" Id="6" Name="娱乐"/>
+    </Bill:AddBillViewModel.SelectedCategoryItem>
+</Bill:AddBillViewModel>
